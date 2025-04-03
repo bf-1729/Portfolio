@@ -4,7 +4,7 @@ import Ecommerce from "../images/Ecommerce.png"
 import crud from "../images/crud.png"
 import quiz from "../images/quiz.png"
 import searchbar from "../images/searchbar.png"
-import auth from "../images/JWT.png"
+import auth from "../images/jwt.png"
 import doctors from "../images/doctors.png"
 
 const Projects = () => {
