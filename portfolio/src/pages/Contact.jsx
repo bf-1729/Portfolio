@@ -63,7 +63,7 @@ const Contact = () => {
                 placeholder='Your Name'
                 value={form.name}
                 onChange={handleChange}
-                className='w-96 p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
+                className='p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
                 required
               />
               <input
@@ -74,7 +74,7 @@ const Contact = () => {
                 placeholder='Your Email'
                 value={form.email}
                 onChange={handleChange}
-                className='w-96 p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
+                className='p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
                 required
               />
               <textarea
@@ -84,14 +84,14 @@ const Contact = () => {
                 placeholder='Your Message'
                 value={form.message}
                 onChange={handleChange}
-                className='w-96 p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all h-40'
+                className='p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all h-40'
                 required
               ></textarea>
               <button
               data-aos="fade-right"
               data-aos-delay-400
                 type='submit'
-                className='w-96 bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-md font-semibold transition-all hover:scale-105'
+                className='bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-md font-semibold transition-all hover:scale-105'
               >
                 Send Message
               </button>
@@ -114,7 +114,7 @@ const Contact = () => {
               { href: "https://www.linkedin.com/in/manti-lakshmi-narasimha/", img: "https://img.icons8.com/color/48/000000/linkedin.png", title: "LinkedIn", detail: "linkedin.com/in/manti-lakshmi-narasimha" },
               { href: "https://github.com/bf-1729", img: "https://img.icons8.com/glyph-neue/64/ffffff/github.png", title: "GitHub", detail: "github.com/bf-1729" }
             ].map((item, index) => (
-              <div key={index} data-aos="fade-left" className='bg-gray-600 lg:w-64 hover:bg-gray-800 p-2 rounded-xl shadow-xl transition-all transform hover:scale-105'>
+              <div key={index} data-aos="fade-left" className='bg-gray-700 lg:w-64 hover:bg-gray-800 p-2 rounded-xl shadow-xl transition-all transform hover:scale-105'>
                 <img className='w-12 h-12 mb-4' src={item.img} alt={item.title} />
                 <h2 className='text-lg font-semibold text-white'>{item.title}</h2>
                 <a href={item.href} target='_blank' rel='noopener noreferrer' className='text-cyan-400 hover:underline mt-2'>
