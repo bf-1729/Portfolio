@@ -38,7 +38,7 @@ const Contact = () => {
   
 
   return (
-    <div id='contact' className='lg:w-4/5 w-11/12 mx-auto py-16 mt-[2rem] lg:-mt-12'>
+    <div id='contact' className='lg:w-4/5 w-full mx-auto py-16 lg:-mt-12'>
       <div className='text-center mb-12'>
         <h1 className='font-bold lg:text-4xl text-4xl bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
           Contact Me
@@ -63,7 +63,7 @@ const Contact = () => {
                 placeholder='Your Name'
                 value={form.name}
                 onChange={handleChange}
-                className='p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
+                className='w-96 p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
                 required
               />
               <input
@@ -74,7 +74,7 @@ const Contact = () => {
                 placeholder='Your Email'
                 value={form.email}
                 onChange={handleChange}
-                className='p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
+                className='w-96 p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all'
                 required
               />
               <textarea
@@ -84,14 +84,14 @@ const Contact = () => {
                 placeholder='Your Message'
                 value={form.message}
                 onChange={handleChange}
-                className='p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all h-40'
+                className='w-96 p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all h-40'
                 required
               ></textarea>
               <button
               data-aos="fade-right"
               data-aos-delay-400
                 type='submit'
-                className='bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-md font-semibold transition-all hover:scale-105'
+                className='w-96 bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-md font-semibold transition-all hover:scale-105'
               >
                 Send Message
               </button>
@@ -99,7 +99,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className='lg:w-1/2 w-full lg:mt-20'>
+        <div className='lg:w-1/2 w-full lg:mt-20 mx-auto'>
           <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8 gap-y-2'>
             {[
               

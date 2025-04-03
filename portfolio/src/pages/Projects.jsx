@@ -19,7 +19,7 @@ const Projects = () => {
     { "id":7, "name": "Doctor Appointment Booking", "image": doctors, "techStack": "Html, Css, JavaScript","demo":"https://bf-1729.github.io/DoctorAppointmentBookingSystem","code":"https://github.com/bf-1729/DoctorAppointmentBookingSystem.git" }
   ]
   return (
-    <div id='projects' className='container mx-auto lg:w-3/4 w-full lg:mt-14 mt-[2rem] bg-gray-800 h-fit'>
+    <div id='projects' className='container mx-auto lg:w-3/4 w-full lg:mt-14 mt-[0rem] bg-gray-800 h-fit'>
       <div className='flex justify-center w-full'>
         <h1 className='font-bold text-center lg:text-4xl text-3xl bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>PROJECTS</h1>
       </div>
@@ -30,7 +30,7 @@ const Projects = () => {
           <div data-aos="fade-up" className='flex flex-col items-center bg-gray-900 p-4 lg:gap-2 gap-4 rounded-lg lg:w-full h-full w-55'>
             <h1 className='text-center lg:text-xl text-lg'>{item.name}</h1>
             <img className='lg:w-56 w-full lg:h-[250px] h-72 object-cover' src={item.image}></img>
-            <p className='text-sm'>Tech Stack:{item.techStack}</p>
+            <p className='text-sm'><b>Tech Stack </b> : {item.techStack}</p>
             <div className='flex gap-4'>
               <a href={item.demo} className="lg:text-[16px] text-nowrap text-md lg:h-fit h-10 lg:px-7 px-12 lg:py-1.5 py-1.5 cursor-pointer text-black font-semibold rounded-lg bg-blue-400 hover:text-white hover:shadow-[0_0_10px_#00ff95] transition duration-300">
                 Demo

@@ -46,7 +46,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="h-16 w-full text-white bg-teal-700 fixed z-10">
+    <div className="h-16 w-full text-white bg-teal-700 z-10">
       <div className="h-full flex lg:items-center items-center justify-between px-4 lg:px-10">
         <div className="lg:flex w-[79%] justify-between mx-auto hidden gap-14 lg:text-lg text-md">
           <div className='lg:text-3xl text-xl bg-gradient-to-r from-cyan-400 to-gray-200 bg-clip-text text-transparent font-bold'>Portfolio</div>
