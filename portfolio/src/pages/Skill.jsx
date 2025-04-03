@@ -22,7 +22,7 @@ const Skill = () => {
       <div className='grid lg:grid-cols-4 grid-cols-3 lg:mt-10 mt-4 gap-y-2.5'>
 
         {skillArray.map((item) => (
-          <div className='transition delay-100 duration-100 ease-in hover:-translate-y-2 w-36'>
+          <div className='transition delay-100 duration-100 ease-in hover:-translate-y-2 w-28'>
           <div data-aos="flip-left" data-aos-delay={item.id *50} className='hover:bg-slate-600 flex flex-col items-center bg-gray-900 lg:w-60 gap-2 rounded-lg py-4'>
             <img className='lg:w-36 w-20 lg:h-36 h-20' src={item.image} alt="html-5--v1" />
             <h1>{item.name}</h1>
