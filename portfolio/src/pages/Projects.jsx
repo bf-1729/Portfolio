@@ -32,7 +32,7 @@ const Projects = () => {
             <img className='lg:w-56 w-full lg:h-[250px] h-72 object-cover' src={item.image}></img>
             <p className='text-sm'>Tech Stack:{item.techStack}</p>
             <div className='flex gap-4'>
-              <a href={item.demo} className="lg:text-[16px] text-md lg:h-fit h-10 lg:px-7 px-16 lg:py-1.5 py-1.5 cursor-pointer text-black font-semibold rounded-lg bg-blue-400 hover:text-white hover:shadow-[0_0_10px_#00ff95] transition duration-300">
+              <a href={item.demo} className="lg:text-[16px] text-nowrap text-md lg:h-fit h-10 lg:px-7 px-16 lg:py-1.5 py-1.5 cursor-pointer text-black font-semibold rounded-lg bg-blue-400 hover:text-white hover:shadow-[0_0_10px_#00ff95] transition duration-300">
                 Demo
               </a>
               <a href={item.code} className="text-left text-nowrap lg:text-[16px] bg-orange-400 text-md lg:px-4 px-12 cursor-pointer lg:py-1.5 py-1.5 text-black font-semibold rounded-lg hover:text-white hover:bg-gray hover:shadow-[0_0_10px_#00ff95] transition duration-300">

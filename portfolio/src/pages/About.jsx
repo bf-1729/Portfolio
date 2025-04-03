@@ -3,7 +3,7 @@ import img1 from "../images/profile.png"
 
 const About = () => {
   return (
-    <div id='about' className='container -mt-16 lg:-mb-8 mb-16 mx-auto lg:w-4/5 w-5/6 h-screen'>
+    <div id='about' className='container mt-[4rem] lg:-mb-8 mb-16 mx-auto lg:w-4/5 w-5/6 h-screen'>
 
       <div className='flex items-center lg:flex-row flex-col-reverse lg:border-none border-2 border-gray-500 lg:h-5/6 h-fit mt-4 rounded-lg lg:p-0 p-0 gap-4'>
         <div data-aos='fade-right' className='flex flex-col justify-center lg:items-start items-center lg:ml-10 gap-4 w-full h-full flex-1'>

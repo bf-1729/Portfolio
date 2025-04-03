@@ -15,7 +15,7 @@ const Skill = () => {
 
   ]
   return (
-    <div id='skill' className='bg-gray-800 lg:-mt-12 mt-16 lg:w-3/4 w-11/12 mx-auto'>
+    <div id='skill' className='bg-gray-800 lg:-mt-12 mt-[4rem] lg:w-3/4 w-fit mx-auto'>
       <div className='flex justify-center w-full'>
         <h1 className='font-bold text-center lg:text-4xl text-3xl bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>SKILLS</h1>
       </div>
@@ -24,7 +24,7 @@ const Skill = () => {
         {skillArray.map((item) => (
           <div className='transition delay-100 duration-200 ease-in hover:-translate-y-4'>
           <div data-aos="flip-left" data-aos-delay={item.id *50} className='hover:bg-slate-600 flex flex-col items-center bg-gray-900 lg:w-60 w-36 gap-2 rounded-lg py-4'>
-            <img className='lg:w-36 w-24 lg:h-36 h-24' src={item.image} alt="html-5--v1" />
+            <img className='lg:w-36 w-20 lg:h-36 h-20' src={item.image} alt="html-5--v1" />
             <h1>{item.name}</h1>
           </div>
           </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="relative h-16 text-white bg-teal-700 fixed-top">
+    <div className="h-16 w-full text-white bg-teal-700 fixed z-10">
       <div className="h-full flex lg:items-center items-center justify-between px-4 lg:px-10">
         <div className="lg:flex w-[79%] justify-between mx-auto hidden gap-14 lg:text-lg text-md">
           <div className='lg:text-3xl text-xl bg-gradient-to-r from-cyan-400 to-gray-200 bg-clip-text text-transparent font-bold'>Portfolio</div>
@@ -95,7 +95,7 @@ const Navbar = () => {
             <p className='mt-2'><img className='w-11' src="https://img.icons8.com/ios-filled/50/1F2937/multiply.png" alt="multiply" /></p>
           </div>
           <AnchorLink className='anchor-link hover:bg-teal-400 hover:text-black h-10 pt-2' href='#about'><NavLink onClick={() => setVisible(false)} className="pl-6" to="/">
-            Home
+            About Me
           </NavLink></AnchorLink>
           <AnchorLink className='anchor-link hover:bg-teal-400 hover:text-black h-10 pt-2' href='#skill'><NavLink onClick={() => setVisible(false)} className="pl-6" to="/collection">
             Skills
