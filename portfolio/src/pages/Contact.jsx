@@ -38,7 +38,7 @@ const Contact = () => {
   
 
   return (
-    <div id='contact' className='lg:w-4/5 w-11/12 mx-auto py-16'>
+    <div id='contact' className='lg:w-4/5 w-11/12 mx-auto py-16 mt-[2rem] lg:-mt-12'>
       <div className='text-center mb-12'>
         <h1 className='font-bold lg:text-4xl text-4xl bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
           Contact Me
@@ -100,7 +100,7 @@ const Contact = () => {
         </div>
 
         <div className='lg:w-1/2 w-full lg:mt-20'>
-          <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-4 gap-y-2'>
+          <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8 gap-y-2'>
             {[
               
               { 
@@ -114,7 +114,7 @@ const Contact = () => {
               { href: "https://www.linkedin.com/in/manti-lakshmi-narasimha/", img: "https://img.icons8.com/color/48/000000/linkedin.png", title: "LinkedIn", detail: "linkedin.com/in/manti-lakshmi-narasimha" },
               { href: "https://github.com/bf-1729", img: "https://img.icons8.com/glyph-neue/64/ffffff/github.png", title: "GitHub", detail: "github.com/bf-1729" }
             ].map((item, index) => (
-              <div key={index} data-aos="fade-left" className='bg-gray-600 lg:w-64 hover:bg-gray-700 p-2 rounded-xl shadow-xl transition-all transform hover:scale-105'>
+              <div key={index} data-aos="fade-left" className='bg-gray-600 lg:w-64 hover:bg-gray-800 p-2 rounded-xl shadow-xl transition-all transform hover:scale-105'>
                 <img className='w-12 h-12 mb-4' src={item.img} alt={item.title} />
                 <h2 className='text-lg font-semibold text-white'>{item.title}</h2>
                 <a href={item.href} target='_blank' rel='noopener noreferrer' className='text-cyan-400 hover:underline mt-2'>

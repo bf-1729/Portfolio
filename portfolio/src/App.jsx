@@ -9,8 +9,9 @@ import Contact from './pages/Contact'
 const App = () => {
   return (
     <div className='text-white h-fit'>
-      <div className='flex flex-col gap-16 bg-gray-800 h-fit overflow-hidden'>
-        <Navbar />
+      <Navbar />
+      <div className='flex flex-col gap-16 bg-gray-800 h-fit overflow-hidden px-5'>
+        
         <About/>
         <Skill/>
         <Projects/>
