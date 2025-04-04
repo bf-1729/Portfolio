@@ -20,7 +20,7 @@ const Skill = () => {
 
       {/* Title Section */}
       <div className='flex justify-center w-full mb-10'>
-        <h1 className='text-center lg:text-5xl text-3xl font-extrabold bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
+        <h1 className='text-center lg:text-5xl text-4xl font-extrabold bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
           My Skills
         </h1>
       </div>

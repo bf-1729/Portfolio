@@ -23,7 +23,7 @@ const Projects = () => {
 
       {/* Title Section */}
       <div className='flex justify-center w-full mb-8'>
-        <h1 className='text-center text-5xl font-extrabold bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
+        <h1 className='text-center text-4xl lg:text-5xl font-extrabold bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
           My Projects
         </h1>
       </div>
