@@ -26,16 +26,16 @@ const Skill = () => {
       </div>
 
       {/* Skill Cards Grid */}
-      <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6 place-items-center'>
+      <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-12 place-items-center'>
 
         {skillArray.map((item) => (
           <div key={item.id} className='relative group'>
             <div 
               data-aos="flip-left" 
               data-aos-delay={item.id * 50} 
-              className='bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg shadow-gray-800 
+              className='bg-white/10 backdrop-blur-md p-4 rounded-2xl shadow-lg shadow-gray-800 
                          hover:shadow-teal-500/60 transition-transform transform hover:scale-110
-                         flex flex-col items-center w-44 lg:w-52 border border-gray-700 hover:border-teal-400'
+                         flex flex-col items-center w-36 lg:w-52 border border-gray-700 hover:border-teal-400'
             >
               {/* Skill Icon */}
               <img className='w-20 lg:w-28 transition-all duration-300 group-hover:scale-110' src={item.image} alt={item.name} />

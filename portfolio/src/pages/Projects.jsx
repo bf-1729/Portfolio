@@ -19,7 +19,7 @@ const Projects = () => {
   ]
 
   return (
-    <div id='projects' className='container lg:mx-auto lg:w-4/5 w-full bg-gradient-to-r from-gray-900 to-black p-10 rounded-lg shadow-lg'>
+    <div id='projects' className='container lg:mx-auto lg:w-4/5 w-full bg-gradient-to-r from-gray-900 to-black p-4 rounded-lg shadow-lg'>
 
       {/* Title Section */}
       <div className='flex justify-center w-full mb-8'>

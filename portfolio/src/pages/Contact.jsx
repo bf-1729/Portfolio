@@ -34,14 +34,14 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='lg:w-4/5 w-full mx-auto py-16 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl backdrop-blur-lg p-10'>
+    <div id='contact' className='lg:w-4/5 w-full mx-auto py-16 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl backdrop-blur-lg p-4'>
       <div className='text-center mb-12'>
         <h1 className='font-bold text-5xl text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text'>Get In Touch</h1>
         <p className='text-gray-400 mt-3 text-lg'>Let's work together! Contact me for any queries or collaborations.</p>
       </div>
       
       <div className='flex lg:flex-row flex-col gap-12'>
-        <div data-aos="fade-right" className='lg:w-1/2 w-full bg-gray-700 bg-opacity-50 p-8 rounded-xl shadow-xl'>
+        <div data-aos="fade-right" className='lg:w-1/2 w-full bg-gray-700 bg-opacity-50 p-4 rounded-xl shadow-xl'>
           <h2 className='text-2xl font-semibold text-white mb-6 text-center'>Drop Me a Message</h2>
           <form onSubmit={handleSubmit} className='flex flex-col gap-6'>
             <input
