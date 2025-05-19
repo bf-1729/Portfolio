@@ -32,7 +32,7 @@ const About = () => {
 
         {/* About Text */}
         <div className="flex-1 space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-4.5xl font-extrabold bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent" data-aos="zoom-in">
+          <h1 className="text-2xl md:text-4.5xl font-extrabold bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent" data-aos="zoom-in">
             Lakshmi Narasimha
           </h1>
           <p data-aos="fade-left" className="text-gray-300 text-lg leading-relaxed">

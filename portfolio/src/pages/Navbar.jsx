@@ -25,7 +25,7 @@ const Navbar = () => {
     <header className="fixed top-0 w-full z-50 backdrop-blur-lg bg-white/10 border-b border-white/10 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <h1 className="text-3xl font-bold tracking-wide bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent">
+        <h1 className="lg:text-3xl text-2xl font-bold tracking-wide bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent">
           Lakshmi Narasimha
         </h1>
 

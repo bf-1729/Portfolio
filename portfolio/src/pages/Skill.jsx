@@ -70,7 +70,7 @@ const Skill = () => {
                     >
                       <div className="flex items-center mb-2">
                         <img src={skill.image} alt={skill.name} className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3" />
-                        <h4 className="text-xs sm:text-sm lg:text-base font-semibold">{skill.name}</h4>
+                        <h4 className="text-sm sm:text-sm lg:text-base font-semibold">{skill.name}</h4>
                         <span className="ml-auto text-cyan-400 font-semibold text-xs sm:text-sm">{skill.level}%</span>
                       </div>
                       <div className="w-full bg-gray-700/50 rounded-full h-2 sm:h-3">
