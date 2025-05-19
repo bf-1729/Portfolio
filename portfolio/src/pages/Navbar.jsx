@@ -1,114 +1,101 @@
 "use client";
 import 'aos/dist/aos.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const [visible, setVisible] = useState(false);
-  const [aosKey, setAosKey] = useState(0); // Unique key to force AOS reinitialization
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    let AOS;
-    const initAOS = async () => {
-      try {
-        AOS = (await import('aos')).default;
-        AOS.init({
-          duration: 1000,
-          easing: 'ease',
-          once: false, // Allow animations to trigger multiple times
-          anchorPlacement: 'top-bottom',
-        });
-      } catch (error) {
-        console.error('Failed to load AOS:', error);
-      }
+    const loadAOS = async () => {
+      const AOS = (await import('aos')).default;
+      AOS.init({ duration: 1000, easing: 'ease-in-out', once: false });
     };
-
-    initAOS();
-
-    // Force AOS to refresh
-    setTimeout(() => {
-      if (AOS) {
-        AOS.refresh();
-      }
-    }, 100);
-
-    // Clean up on unmount
-    return () => {
-      if (AOS) {
-        AOS.refreshHard();
-      }
-    };
+    loadAOS();
   }, []);
-  // Trigger reinitialization when revisiting the page
-  useEffect(() => {
-    setAosKey((prev) => prev + 1);
-  }, []);
+
+  const navItems = [
+    { name: "About Me", href: "#about" },
+    { name: "Skills", href: "#skill" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
-    <div className="h-16 w-full text-white bg-teal-700 z-10">
-      <div className="h-full flex lg:items-center items-center justify-between px-4 lg:px-10">
-        <div className="lg:flex w-[82%] justify-between mx-auto hidden gap-14 lg:text-lg text-md">
-          <div className='lg:text-3xl text-xl bg-gradient-to-r from-cyan-400 to-gray-200 bg-clip-text text-transparent font-bold'>Portfolio</div>
-          <div className='flex gap-10'>
-            <div className="relative group">
-              <AnchorLink className="anchor-link" href="#about">
-                About Me
-              </AnchorLink>
-              <span className="absolute left-0 bottom-2 w-0 h-0.5 bg-teal-400 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-            </div>
+    <header className="fixed top-0 w-full z-50 backdrop-blur-lg bg-white/10 border-b border-white/10 shadow-sm">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <h1 className="text-3xl font-bold tracking-wide bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent">
+          Lakshmi Narasimha
+        </h1>
 
-            <div className='relative group'>
-              <AnchorLink className='anchor-link' offset={100} href='#skill'>Skills</AnchorLink>
-              <span className='absolute left-0 bottom-2 w-0 h-0.5 bg-teal-400 transition-all duration-100 ease-in-out group-hover:w-full'></span>
-              </div>
-            <div className='relative group'>
-              <AnchorLink className='anchor-link' offset={100} href='#projects'>Projects</AnchorLink>
-              <span className='absolute left-0 bottom-2 w-0 h-0.5 bg-teal-400 transition-all duration-300 ease-in-out group-hover:w-full'></span>
-              </div>
-            <div className='hover:bg-black rounded-lg'><AnchorLink className='anchor-link hover:bg-black bg-violet-600 p-2 rounded-lg' offset={100} href='#contact'>Contact Me</AnchorLink></div>
-          </div>
-        </div>
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex space-x-10 text-lg font-medium">
+          {navItems.map((item) => (
+            <AnchorLink
+              key={item.name}
+              href={item.href}
+              offset="80"
+              className="relative group text-white hover:text-cyan-300 transition duration-300"
+            >
+              {item.name}
+              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+            </AnchorLink>
+          ))}
+        </nav>
 
-        {/* Hamburger Icon for Mobile */}
-        <div className='lg:hidden text-2xl w-96'>Portfolio</div>
-        <div className="lg:hidden flex mx-auto" onClick={() => setVisible(!visible)}>
-
-          <div className='cursor-pointer'>
-            <div className="w-6 h-0.5 bg-white mb-2"></div>
-            <div className="w-6 h-0.5 bg-white mb-2"></div>
+        {/* Mobile Toggle Button */}
+        <button
+          className="lg:hidden focus:outline-none"
+          onClick={() => setMobileMenuOpen(true)}
+        >
+          <div className="space-y-1">
+            <div className="w-6 h-0.5 bg-white"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
             <div className="w-6 h-0.5 bg-white"></div>
           </div>
-        </div>
+        </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation Drawer */}
       <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-teal-700 transition-all ${visible ? 'w-3/5 h-screen' : 'w-0'}`}
-        style={{ transitionDuration: '0.3s' }}
+        className={`fixed top-0 right-0 h-screen w-3/4 bg-gradient-to-br from-cyan-800 to-teal-700 text-white p-6 transform transition-transform duration-300 ease-in-out z-40 ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
       >
-        <div className="flex flex-col gap-4 text-white-600">
-          <div
-            onClick={() => setVisible(false)}
-            className="flex items-center p-3 cursor-pointer"
-          >
-            <p className='mt-2'><img className='w-11' src="https://img.icons8.com/ios-filled/50/1F2937/multiply.png" alt="multiply" /></p>
-          </div>
-          <AnchorLink className='anchor-link hover:bg-teal-400 hover:text-black h-10 pt-2' href='#about'><NavLink onClick={() => setVisible(false)} className="pl-6" to="/">
-            About Me
-          </NavLink></AnchorLink>
-          <AnchorLink className='anchor-link hover:bg-teal-400 hover:text-black h-10 pt-2' href='#skill'><NavLink onClick={() => setVisible(false)} className="pl-6" to="/collection">
-            Skills
-          </NavLink></AnchorLink>
-          <AnchorLink className='anchor-link hover:bg-teal-400 hover:text-black h-10 pt-2' href='#projects'><NavLink onClick={() => setVisible(false)} className="pl-6" to="/about">
-            Projects
-          </NavLink></AnchorLink>
-          <AnchorLink className='anchor-link hover:bg-teal-400 hover:text-black h-10 pt-2' href='#contact'><NavLink onClick={() => setVisible(false)} className="pl-6" to="/contact">
-            Contact
-          </NavLink></AnchorLink>
+        <div className="flex justify-end">
+          <button onClick={() => setMobileMenuOpen(false)}>
+            <img
+              src="https://img.icons8.com/ios-filled/50/ffffff/multiply.png"
+              alt="Close"
+              className="w-6"
+            />
+          </button>
         </div>
+
+        <nav className="mt-10 flex flex-col space-y-6 text-lg font-semibold">
+          {navItems.map((item) => (
+            <AnchorLink
+              key={item.name}
+              href={item.href}
+              offset="80"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:bg-white/10 rounded px-4 py-2 transition duration-300"
+            >
+              {item.name}
+            </AnchorLink>
+          ))}
+        </nav>
       </div>
-    </div>
+
+      {/* Optional dark backdrop on mobile nav open */}
+      {mobileMenuOpen && (
+        <div
+          onClick={() => setMobileMenuOpen(false)}
+          className="fixed inset-0 bg-black/50 z-30"
+        ></div>
+      )}
+    </header>
   );
 };
 

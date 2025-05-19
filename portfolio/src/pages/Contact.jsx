@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='lg:w-4/5 w-full mx-auto py-16 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl backdrop-blur-lg p-4'>
+    <div id='contact' className='lg:w-4/5 w-full mx-auto py-16 backdrop-blur-lg p-4'>
       <div className='text-center mb-12'>
         <h1 className='font-bold text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text'>Get In Touch</h1>
         <p className='text-gray-400 mt-3 text-lg'>Let's work together! Contact me for any queries or collaborations.</p>

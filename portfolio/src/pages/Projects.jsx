@@ -1,66 +1,129 @@
-import React from 'react'
-import pizzaApp from "../images/pizza.png"
-import Ecommerce from "../images/Ecommerce.png"
-import crud from "../images/crud.png"
-import quiz from "../images/quiz.png"
-import searchbar from "../images/searchbar.png"
-import auth from "../images/jwt.png"
-import doctors from "../images/doctors.png"
+import React from "react";
+import pizzaApp from "../images/pizza.png";
+import Ecommerce from "../images/Ecommerce.png";
+import crud from "../images/crud.png";
+import quiz from "../images/quiz.png";
+import searchbar from "../images/searchbar.png";
+import auth from "../images/jwt.png";
+import doctors from "../images/doctors.png";
 
-const Projects = () => {
-  const projectArray = [
-    { "id": 1, "name": "Pizza Delivery Website", "image": pizzaApp, "techStack": "React, CSS, Node.js, Express.js, MongoDB", "demo": "https://pizzahut-frontend-site.vercel.app", "code": "https://github.com/bf-1729/Pizza-delivery-App.git" },
-    { "id": 2, "name": "Ecommerce Website", "image": Ecommerce, "techStack": "React, Tailwind, Node.js, Express.js, MongoDB", "demo": "https://buyease-frontend.vercel.app", "code": "https://github.com/bf-1729/Ecommerce-App.git" },
-    { "id": 3, "name": "JWT Authentication", "image": auth, "techStack": "React, CSS, Node.js, Express.js, MongoDB", "demo": "https://jwt-authentication-opal.vercel.app", "code": "https://github.com/bf-1729/JWT-Authentication.git" },
-    { "id": 4, "name": "CRUD Application", "image": crud, "techStack": "React, Tailwind, Node.js, Express.js, MongoDB", "demo": "https://crud-app-frontend-jade.vercel.app", "code": "https://github.com/bf-1729/CRUD-App.git" },
-    { "id": 5, "name": "Quiz Application", "image": quiz, "techStack": "HTML, CSS, JavaScript", "demo": "https://quiz-app-beta-amber.vercel.app", "code": "https://github.com/bf-1729/QuizApp.git" },
-    { "id": 6, "name": "Autocomplete Searchbar", "image": searchbar, "techStack": "React, Tailwind", "demo": "https://autocomplete-search-bar-phi.vercel.app", "code": "https://github.com/bf-1729/Autocomplete-Search-Bar.git" },
-    { "id": 7, "name": "Doctor Appointment Booking", "image": doctors, "techStack": "HTML, CSS, JavaScript", "demo": "https://bf-1729.github.io/DoctorAppointmentBookingSystem", "code": "https://github.com/bf-1729/DoctorAppointmentBookingSystem.git" }
-  ]
+const projects = [
+  {
+    id: 1,
+    title: "Pizza Delivery Website",
+    image: pizzaApp,
+    stack: ["React", "Redux", "CSS", "BootStrap", "Node.js", "Express.js", "MongoDB"],
+    demo: "https://pizzahut-frontend-site.vercel.app",
+    code: "https://github.com/bf-1729/Pizza-delivery-App.git",
+  },
+  {
+    id: 2,
+    title: "Ecommerce Website",
+    image: Ecommerce,
+    stack: ["React", "Tailwind Css", "Node.js", "Express.js", "MongoDB"],
+    demo: "https://buyease-frontend.vercel.app",
+    code: "https://github.com/bf-1729/Ecommerce-App.git",
+  },
+  {
+    id: 3,
+    title: "JWT Authentication",
+    image: auth,
+    stack: ["React", "CSS", "Node.js", "Express.js", "MongoDB"],
+    demo: "https://jwt-authentication-opal.vercel.app",
+    code: "https://github.com/bf-1729/JWT-Authentication.git",
+  },
+  {
+    id: 4,
+    title: "CRUD Application",
+    image: crud,
+    stack: ["React", "Tailwind Css", "Node.js", "Express.js", "MongoDB"],
+    demo: "https://crud-app-frontend-jade.vercel.app",
+    code: "https://github.com/bf-1729/CRUD-App.git",
+  },
+  {
+    id: 5,
+    title: "Quiz Application",
+    image: quiz,
+    stack: ["HTML", "CSS", "JavaScript"],
+    demo: "https://quiz-app-beta-amber.vercel.app",
+    code: "https://github.com/bf-1729/QuizApp.git",
+  },
+  {
+    id: 6,
+    title: "Autocomplete Searchbar",
+    image: searchbar,
+    stack: ["React", "Tailwind Css"],
+    demo: "https://autocomplete-search-bar-phi.vercel.app",
+    code: "https://github.com/bf-1729/Autocomplete-Search-Bar.git",
+  },
+  {
+    id: 7,
+    title: "Doctor Appointment Booking",
+    image: doctors,
+    stack: ["HTML", "CSS", "JavaScript"],
+    demo: "https://bf-1729.github.io/DoctorAppointmentBookingSystem",
+    code: "https://github.com/bf-1729/DoctorAppointmentBookingSystem.git",
+  },
+];
 
-  return (
-    <div id='projects' className='container lg:mx-auto lg:w-4/5 w-full bg-gradient-to-r from-gray-900 to-black p-4 rounded-lg shadow-lg'>
-
-      {/* Title Section */}
-      <div className='flex justify-center w-full mb-8'>
-        <h1 className='text-center text-4xl lg:text-5xl font-extrabold bg-gradient-to-r bg-clip-text text-transparent from-teal-400 to-blue-600'>
-          My Projects
-        </h1>
-      </div>
-
-      {/* Project Cards Grid */}
-      <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 place-items-center'>
-
-        {projectArray.map((item) => (
-          <div key={item.id} data-aos="fade-up" className='group bg-gray-800 rounded-lg p-5 w-full max-w-sm shadow-xl hover:shadow-teal-500 transition duration-300'>
-
-            {/* Project Image */}
-            <div className='relative overflow-hidden rounded-lg'>
-              <img className='w-full h-56 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105' src={item.image} alt={item.name} />
-            </div>
-
-            {/* Project Info */}
-            <h2 className='mt-4 text-2xl font-semibold text-white text-center'>
-              {item.name}
-            </h2>
-            <p className='text-gray-400 text-sm text-center mt-2'>{item.techStack}</p>
-
-            {/* Buttons */}
-            <div className='flex justify-center gap-4 mt-5'>
-              <a href={item.demo} className="px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300">
-                Demo
-              </a>
-              <a href={item.code} className="px-6 py-2 text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition duration-300">
-                Code
-              </a>
-            </div>
-
-          </div>
+const ProjectCard = ({ project }) => (
+  <div data-aos="fade-up" data-aos-delay={project.id*100} className="bg-[#1a1a1a] border border-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-purple-500/30 transition duration-300 group">
+    <div className="overflow-hidden">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+    <div className="p-5">
+      <h3 className="text-xl font-semibold text-purple-400 mb-3">{project.title}</h3>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {project.stack.map((tech, index) => (
+          <span
+            key={index}
+            className="bg-purple-600 text-xs text-white px-3 py-1 rounded-full"
+          >
+            {tech}
+          </span>
         ))}
-
+      </div>
+      <div className="flex justify-between text-sm">
+        <a
+          href={project.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white font-medium transition"
+        >
+          Live Demo
+        </a>
+        <a
+          href={project.code}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-700 hover:bg-black px-4 py-2 rounded-md text-white font-medium transition"
+        >
+          View Code
+        </a>
       </div>
     </div>
-  )
-}
+  </div>
+);
 
-export default Projects
+const Projects = () => {
+  return (
+    <section id="projects" className="py-20 px-6 md:px-12 bg-black text-white">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-14 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+          🚀 Projects I've Built
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
